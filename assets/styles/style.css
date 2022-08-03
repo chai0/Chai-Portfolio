@@ -66,9 +66,14 @@ a.active {
 }
 main {
   justify-content: center;
-  gap: 4rem;
-  width: 50rem;
+  gap: 3rem;
+  width: 34rem;
 }
+
+.name-wrap {
+  white-space: nowrap;
+}
+
 main > * {
   flex-basis: 100%;
 }
@@ -79,6 +84,11 @@ main > * {
   font-size: 0.8rem;
   font-weight: 400;
 }
+
+.main-description {
+  text-align: justify;
+}
+
 main > img {
   width: 50%;
   display: block;
@@ -102,7 +112,11 @@ footer {
 }
 
 .main-about {
-  width: 30rem;
+  width: 34rem;
+}
+
+.main-about > p {
+  text-align: justify;
 }
 
 .main-about > h1 {
@@ -111,10 +125,23 @@ footer {
 
 .main-projects {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 4rem;
-  margin-top: 30px;
+  margin-top: 35px;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-projects {
+  position: static;
+  margin-top: 5rem;
+}
+
 
 .card {
   box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
@@ -129,7 +156,7 @@ footer {
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
 
-.card > img {
+.card img {
   width: 100%;
   height: 100%;
   object-position: bottom;
@@ -137,7 +164,7 @@ footer {
 }
 
 .main-contactme {
-  min-width: 25rem;
+  min-width: 24srem;
   margin-top: 30px;
 }
 
@@ -148,19 +175,26 @@ form {
 .form-input {
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
 
 .form-input > input {
   padding: 0.3em 1em;
-  border-radius: 8px;
-  border: 1px solid rgb(0 0 0 / 0.25);
+  border: none;
+    border-bottom: 1px solid black;
+
 }
 
-.form-input > input:focus {
+.form-input > input:focus-visible {
+  border: 0;
+  outline:0;
+  border-bottom: 2px solid black;
   box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
 }
-
+input{
+  border: none;
+}
 .form-actions {
   width: 100%;
   justify-content: space-between;
